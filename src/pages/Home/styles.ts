@@ -18,3 +18,11 @@ display:flex;
 flex-wrap: wrap;
 
     `;
+
+export const RightWrapper = styled.div`
+width: 24.427vw;
+height:1080px;
+display:flex;
+flex-wrap: wrap;
+
+    `;
