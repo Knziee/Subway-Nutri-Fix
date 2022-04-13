@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 export const BackgroundContainerInfo = styled.div`
     display: flex;
+    flex-direction: column;
     background-color: #95C83D;
     width:432px;
     height: 899px;
