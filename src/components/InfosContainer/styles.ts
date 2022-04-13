@@ -4,12 +4,16 @@ import styled from "styled-components";
 export const BackgroundContainerInfo = styled.div`
     display: flex;
     flex-direction: column;
-    background-color: #95C83D;
+    background-color: #3C7122;
     width:432px;
     height: 899px;
-    opacity: 40%;
     border-radius: 43px;
     margin-left: 28px;
-    margin-top: 26px
+    margin-top: 26px;
     `;
 
+    export const ItemListWrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px
+    `;

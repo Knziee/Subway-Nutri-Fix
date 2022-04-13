@@ -8,6 +8,13 @@ margin-left: auto;
 margin-right: auto;
 display:flex;
 justify-content: flex-start;
-align-items: space-around
-    `;
+align-items: space-around;
+ `;
 
+export const LeftWrapper = styled.div`
+width: 24.427vw;
+height:1080px;
+display:flex;
+flex-wrap: wrap;
+
+    `;
