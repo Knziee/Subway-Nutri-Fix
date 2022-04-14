@@ -1,11 +1,12 @@
-import {  } from './styles'
+import { SmallCircleStyle } from './styles'
 
 
 
 export const SmallCircle: React.FC = () => {
     return (
-        <div>
 
-</div>
+<SmallCircleStyle>
+</SmallCircleStyle>
+
     )
 }

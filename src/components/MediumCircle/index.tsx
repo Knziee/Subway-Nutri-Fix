@@ -1,11 +1,12 @@
-import {  } from './styles'
+import { MediumCircleStyle } from './styles'
 
 
 
 export const MediumCircle: React.FC = () => {
     return (
-        <div>
 
-</div>
+<MediumCircleStyle>
+
+</MediumCircleStyle>
     )
 }
