@@ -26,3 +26,8 @@ width: 350px;
 height: 85px;
 background-color: blue;
 `;
+
+export const SelectArea = styled.div `
+cursor: pointer;
+
+`;

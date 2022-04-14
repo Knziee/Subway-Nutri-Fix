@@ -1,4 +1,5 @@
-import { ItemListContainer, ItemListTitleStyle, ItensInRow } from './styles'
+import { useState, useEffect } from 'react';
+import { ItemListContainer, ItemListTitleStyle, ItensInRow, SelectArea } from './styles'
 import {Item} from '../../Item'
 import noveGraos from "../../../assets/images/9graos.svg"
 import italianoBranco  from '../../../assets/images/italianoBranco.svg';
@@ -12,7 +13,14 @@ ItemListConst?: string
 }
 
 export const Pao: React.FC <ItemListProps> = ({ItemListTitle}) => {
+    let [checked, setChecked] = useState(false);
+    if (checked === true) {
+console.log('checkado')
+    } else {
+        console.log('não checado')
+    }
 
+ 
     const pao = [
         {
             ItemName: '9 Grãos',
@@ -65,15 +73,31 @@ export const Pao: React.FC <ItemListProps> = ({ItemListTitle}) => {
     <div>
 <ItemListContainer>
     <ItemListTitleStyle>{ItemListTitle}</ItemListTitleStyle>
-    <ItensInRow>
+    <ItensInRow >
         {
             pao.map((pao, index) => {
-                return (
-                    <Item 
+                if (checked === true) {
+                   return (
+                    <SelectArea onClick={() => setChecked(!checked)}>
+                    <Item  
                     ItemNameProps={pao.ItemName} 
                     ImgUrlProps={pao.ImgUrl}
+                    
                     />
+                      </SelectArea>   
                 )
+                        } else {
+                            return (
+                                <SelectArea onClick={() => setChecked(!checked)}>
+                                <Item  
+                                ItemNameProps={pao.ItemProtein} 
+                                ImgUrlProps={pao.ImgUrl}
+                                
+                                />
+                                  </SelectArea>   
+                            )
+                        }
+
             })
         }
     </ItensInRow>
