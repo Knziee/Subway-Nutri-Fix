@@ -10,7 +10,13 @@ import {
     KcalCircle,
     SizeDisplay,
     SodiumBar,
-    SodiumBarText
+    SodiumBarText,
+    FlavorPosition,
+    CheesePosition,
+    ExtraPosition,
+    SaladPosition,
+    SaucePosition,
+    TempPosition
    } from './styles'
 import GraphInfoImg from '../../assets/images/GraficoLegenda.svg'
 import PlateImg from '../../assets/images/Prato1pixelzada.svg'
@@ -30,10 +36,45 @@ import tresQueijosInferior from '../../assets/images/paes/3queijosBaixo.svg'
 import parmesaEOreganoInferior from '../../assets/images/paes/parmesaoComOreganoBaixo.svg'
 import aveiaEMelInferior from '../../assets/images/paes/aveiaEmelBaixo.svg'
 import italianoBrancoInferior from '../../assets/images/paes/brancItalianoBaixo.svg'
+//sabores
+import steak from '../../assets/images/sabores/CARNE.svg'
+import frango from '../../assets/images/sabores/FRANGO.svg'
+//queijo
+import swiss from '../../assets/images/queijos/queijosuiço.svg'
+import cheddar from '../../assets/images/queijos/queijocheddar.svg'
+import mozzarella from '../../assets/images/queijos/queijomussarela.svg'
+//adicional
+import bacon from '../../assets/images/adicionais/bacon.svg'
+import pepperoni from '../../assets/images/adicionais/pepperoni.svg'
+import salami from '../../assets/images/adicionais/salame.svg'
+import creamyCheddar from '../../assets/images/adicionais/cheddarCremoso.svg'
+import creamCheese from '../../assets/images/adicionais/creamCheese.svg'
+//salad
+import alfacePicada from '../../assets/images/salada/alfacePicada.svg'
+import tomate from '../../assets/images/salada/tomate.svg'
+import pimentaoverde from '../../assets/images/salada/pimentaoverde.svg'
+import cebolafatiada from '../../assets/images/salada/cebolafatiada.svg'
+import picles from '../../assets/images/salada/picles.svg'
+import azeitonas from '../../assets/images/salada/azeitonas.svg'
+import pepino from '../../assets/images/salada/pepino.svg'
+//sauce
+import barbecue from '../../assets/images/molhos/barbecue.svg'
+import cebolaAgridoce from '../../assets/images/molhos/cebolaAgridoce.svg'
+import chipotle from '../../assets/images/molhos/chipottle.svg'
+import maionese from '../../assets/images/molhos/maionese.svg'
+import maioneseTemperada from '../../assets/images/molhos/maioneseTemperada.svg'
+import MostardaEMel from '../../assets/images/molhos/MostardaEMel.svg'
+import parmesão from '../../assets/images/molhos/parmesão.svg'
+import supreme from '../../assets/images/molhos/supreme.svg'
 
 export const Plate: React.FC = () => {
 const [countSize, setCountSize] = useState(0)
 const [countBread, setCountBread] = useState(0)
+const [countFlavor, setCountFlavor] = useState(0)
+const [countCheese, setCountCheese] = useState(0)
+const [countExtra, setCountExtra] = useState(0)
+const [countSalad, setCountSalad] = useState(0)
+const [countSauce, setCountSauce] = useState(0)
 
 let size: any
 size = [
@@ -69,7 +110,7 @@ bread = [
     fat:0.3,
     protein:8.5,
     kcal:208,
-    sodium:226.
+    sodium:226,
     },  
     {
     name: '3 Queijos',
@@ -80,7 +121,7 @@ bread = [
     fat:1.3,
     protein:12,
     kcal:219,
-    sodium:271.
+    sodium:271,
     },
     {
     name: 'Parmesão e Oregano',
@@ -91,7 +132,7 @@ bread = [
     fat:0.4,
     protein:11,
     kcal:205,
-    sodium:383.
+    sodium:383,
     },  
     {
     name: 'Italiano Branco',
@@ -102,7 +143,7 @@ bread = [
     fat:0.3,
     protein:11,
     kcal:198,
-    sodium:214.
+    sodium:214,
     },       
         // {
     // name: '9 Grãos Aveia e Mel',
@@ -115,11 +156,368 @@ bread = [
     // kcal:999,
     // },
   ]  
-  const carbCalc = size[countSize].carb * bread[countBread].carb 
-  const fatCalc = size[countSize].fat *  bread[countBread].fat 
-  const proteinCalc = size[countSize].protein *  bread[countBread].protein 
-  const kcalCalc = size[countSize].kcal *  bread[countBread].kcal 
-  const sodiumCalc = size[countSize].kcal *  bread[countBread].sodium 
+
+let flavor: any
+flavor = [
+
+      {
+      name: 'Steak Churrasco',
+      category: 'Sabor',
+      img: steak,
+      carb:6.1 ,
+      fat:9.6 ,
+      protein:9,
+      kcal:147,
+      sodium:480,
+      },  
+      {
+        name: 'Frango Teriyaki',
+        category: 'Sabor',
+        img: frango,
+        carb:3 ,
+        fat:1.5 ,
+        protein:13.2,
+        kcal:78,
+        sodium:258,
+        },  
+        {
+          name: 'Vegetariano',
+          category: 'Sabor',
+          img: '',
+          carb:0 ,
+          fat:0 ,
+          protein:0,
+          kcal:0,
+          sodium:0,
+          },  
+  ]
+
+  let cheese: any
+  cheese = [
+    {
+      name: 'Nenhum',
+      category: 'Queijo',
+      img: '',
+      carb:0 ,
+      fat:0 ,
+      protein:0,
+      kcal:0,
+      sodium:0,
+      },  
+
+      {
+      name: 'Suiço',
+      category: 'Queijo',
+      img: swiss,
+      carb:0.8 ,
+      fat:3.8 ,
+      protein:1.4,
+      kcal:44,
+      sodium:140,
+      },  
+      {
+        name: 'Cheddar',
+        category: 'Queijo',
+        img: cheddar,
+        carb:0.8 ,
+        fat:3.8 ,
+        protein:1.4,
+        kcal:43,
+        sodium:171,
+        },  
+        {
+          name: 'Mussarela',
+          category: 'Queijo',
+          img: mozzarella,
+          carb:30 ,
+          fat:3 ,
+          protein:2.5,
+          kcal:38,
+          sodium:49,
+          },  
+  ]
+
+  let extra: any
+  extra = [
+    {
+      name: 'Nenhum',
+      category: 'Extra',
+      img: '',
+      carb:0 ,
+      fat:0 ,
+      protein:0,
+      kcal:0,
+      sodium:0,
+      },  
+      {
+        name: 'Bacon',
+        category: 'Extra',
+        img: bacon,
+        carb:0.6 ,
+        fat:5.6 ,
+        protein:4.8,
+        kcal:72,
+        sodium:282,
+        },  
+        {
+          name: 'Peperoni',
+          category: 'Extra',
+          img: pepperoni,
+          carb:0 ,
+          fat:7.6 ,
+          protein:3.5,
+          kcal:83,
+          sodium:258,
+          },  
+          {
+            name: 'Salame',
+            category: 'Extra',
+            img: salami,
+            carb:0 ,
+            fat:6.5 ,
+            protein:5,
+            kcal:78,
+            sodium:323,
+            },  
+            {
+              name: 'Cheddar Cremoso',
+              category: 'Extra',
+              img: creamyCheddar,
+              carb:2.4 ,
+              fat:6.3 ,
+              protein:2.3,
+              kcal:75,
+              sodium:376,
+              },  
+              {
+                name: 'Cream Cheese',
+                category: 'Extra',
+                img: creamCheese,
+                carb:1.7 ,
+                fat:8.8 ,
+                protein:1.7,
+                kcal:92,
+                sodium:121,
+                },  
+
+      {
+      name: 'Dobro de Queijo: Suiço',
+      category: 'Extra',
+      img: swiss,
+      carb:0.8 ,
+      fat:3.8 ,
+      protein:1.4,
+      kcal:44,
+      sodium:140,
+      },  
+      {
+        name: 'Dobro de Queijo: Cheddar',
+        category: 'Extra',
+        img: cheddar,
+        carb:0.8 ,
+        fat:3.8 ,
+        protein:1.4,
+        kcal:43,
+        sodium:171,
+        },  
+        {
+          name: 'Dobro de Queijo: Mussarela',
+          category: 'Extra',
+          img: mozzarella,
+          carb:30 ,
+          fat:3 ,
+          protein:2.5,
+          kcal:38,
+          sodium:49,
+          },  
+  ]
+
+  let salad: any
+  salad = [
+    {
+      name: 'Nenhum',
+      category: 'Salada',
+      img: '',
+      carb:0 ,
+      fat:0 ,
+      protein:0,
+      kcal:0,
+      sodium:0,
+      },  
+
+      {
+      name: 'Alface',
+      category: 'Salada',
+      img: alfacePicada,
+      carb:0.2,
+      fat:0 ,
+      protein:0.2,
+      kcal:2.5,
+      sodium:1.9,
+      },  
+      {
+        name: 'Tomate',
+        category: 'Salada',
+        img: tomate,
+        carb:1.4,
+        fat:0.1 ,
+        protein:0.3,
+        kcal:6.3,
+        sodium:1.7,
+        },  
+        {
+          name: 'Pimentão Verde',
+          category: 'Salada',
+          img: pimentaoverde,
+          carb:0.3 ,
+          fat:0,
+          protein:0.1,
+          kcal:1.4,
+          sodium:0.2,
+          },  
+          {
+            name: 'Cebola',
+            category: 'Salada',
+            img: cebolafatiada,
+            carb:0.7 ,
+            fat:0,
+            protein:0.1,
+            kcal:2.8,
+            sodium:0.3,
+            },  
+            {
+              name: 'Picles',
+              category: 'Salada',
+              img: picles,
+              carb:0.1 ,
+              fat:0,
+              protein:0,
+              kcal:0.4,
+              sodium:49,
+              },  
+              {
+                name: 'Azeitona',
+                category: 'Salada',
+                img: azeitonas,
+                carb:0.1 ,
+                fat:0,
+                protein:0,
+                kcal:0.4,
+                sodium:49,
+                },  
+                {
+                  name: 'Pepino',
+                  category: 'Salada',
+                  img: pepino,
+                  carb:0.5 ,
+                  fat:0,
+                  protein:0.1,
+                  kcal:2.1,
+                  sodium:0.3,
+                  },   
+  ]
+
+  let sauce: any
+  sauce = [
+    {
+      name: 'Nenhum',
+      category: 'Molho',
+      img: '',
+      carb:0 ,
+      fat:0 ,
+      protein:0,
+      kcal:0,
+      sodium:0,
+      },  
+
+      {
+      name: 'Barbecue',
+      category: 'Molho',
+      img: barbecue,
+      carb:4.5,
+      fat:0.2 ,
+      protein:0.1,
+      kcal:20,
+      sodium:162,
+      },  
+      {
+        name: 'Cebola Agridoce',
+        category: 'Molho',
+        img: cebolaAgridoce,
+        carb:6.4,
+        fat:0 ,
+        protein:0,
+        kcal:26,
+        sodium:64,
+        },  
+        {
+          name: 'Chipotle',
+          category: 'Molho',
+          img: chipotle,
+          carb:1.6 ,
+          fat:6.5,
+          protein:0.2,
+          kcal:69,
+          sodium:135,
+          },  
+          {
+            name: 'Maionese',
+            category: 'Molho',
+            img: maionese,
+            carb:0.1,
+            fat:11,
+            protein:0.1,
+            kcal:102,
+            sodium:71,
+            },  
+            {
+              name: 'Maionese Temperada',
+              category: 'Molho',
+              img: maioneseTemperada,
+              carb:1.1 ,
+              fat:4.3,
+              protein:0,
+              kcal:43,
+              sodium:125,
+              },  
+              {
+                name: 'Mostarde e Mel',
+                category: 'Molho',
+                img: MostardaEMel,
+                carb:5 ,
+                fat:0.2,
+                protein:0.2,
+                kcal:20,
+                sodium:68,
+                },  
+                {
+                  name: 'Parmesão',
+                  category: 'Molho',
+                  img: parmesão,
+                  carb:1.3 ,
+                  fat:5,
+                  protein:0.2,
+                  kcal:50,
+                  sodium:153,
+                  },   
+                  {
+                    name: 'Supreme',
+                    category: 'Molho',
+                    img: supreme,
+                    carb:2.2 ,
+                    fat:10,
+                    protein:0.2,
+                    kcal:237,
+                    sodium:153,
+                    },  
+  ]
+
+
+  const carbCalc = size[countSize].carb * (bread[countBread].carb + flavor[countFlavor].carb + cheese[countCheese].carb + extra[countExtra].carb + salad[countSalad].carb + sauce[countSauce].carb)
+  const fatCalc = size[countSize].fat *  (bread[countBread].fat + flavor[countFlavor].fat + cheese[countCheese].fat + extra[countExtra].fat + salad[countSalad].fat + sauce[countSauce].fat)
+  const proteinCalc = size[countSize].protein *  (bread[countBread].protein + flavor[countFlavor].protein + cheese[countCheese].protein + extra[countExtra].protein + salad[countSauce].protein + sauce[countSauce].protein)
+  const kcalCalc = size[countSize].kcal *  (bread[countBread].kcal + flavor[countFlavor].kcal + cheese[countCheese].kcal + extra[countExtra].kcal + salad[countSalad].kcal + sauce[countSauce].kcal)
+  const sodiumCalc = size[countSize].sodium *  (bread[countBread].sodium + flavor[countFlavor].sodium + cheese[countCheese].sodium + extra[countExtra].sodium + salad[countSalad].sodium + sauce[countSauce].sodiumm)
 
   const foodData = [
     { name: "Carboidrato", value: carbCalc },
@@ -213,20 +611,41 @@ const renderCustomizedLabel = ({
 <BreadPositionBottom>
 <img src={bread[countBread].img2} alt ='' />
 </BreadPositionBottom>
+<SaladPosition><img src = {salad[countSalad].img} alt=''/></SaladPosition>
+<FlavorPosition><img src = {flavor[countFlavor].img} alt=''/></FlavorPosition>
+<CheesePosition><img src = {cheese[countCheese].img} alt=''/></CheesePosition>
+<ExtraPosition><img src = {extra[countExtra].img} alt=''/></ExtraPosition>
+<SaucePosition><img src = {sauce[countSauce].img} alt=''/></SaucePosition>
+
+
+
 <BreadPositionTop>
   <img src={bread[countBread].img} alt ='' />
   </BreadPositionTop>
 
 <p>ta na array {countBread} </p>
 
-<button onClick={() => countBread === bread.length-1 ?  setCountBread(0) : setCountBread(countBread + 1)}>
-    BREAD
-</button>
-
 <button onClick={() => countSize === size.length-1 ?  setCountSize(0) : setCountSize(countSize + 1)}>
-    SIZE
+    TAMANHO
 </button>
-
+<button onClick={() => countBread === bread.length-1 ?  setCountBread(0) : setCountBread(countBread + 1)}>
+    PÃO
+</button>
+<button onClick={() => countFlavor === flavor.length-1 ?  setCountFlavor(0) : setCountFlavor(countFlavor + 1)}>
+    SABOR
+</button>
+<button onClick={() => countCheese === cheese.length-1 ?  setCountCheese(0) : setCountCheese(countCheese + 1)}>
+    QUEIJO
+</button>
+<button onClick={() => countSalad === salad.length-1 ?  setCountSalad(0) : setCountSalad(countSalad + 1)}>
+    SALADA
+</button>
+<button onClick={() => countExtra === extra.length-1 ?  setCountExtra(0) : setCountExtra(countExtra + 1)}>
+    ADICIONAL
+</button>
+<button onClick={() => countSauce === sauce.length-1 ?  setCountSauce(0) : setCountSauce(countSauce + 1)}>
+    MOLHO
+</button>
 </PlateContainer>
 </div>
             )

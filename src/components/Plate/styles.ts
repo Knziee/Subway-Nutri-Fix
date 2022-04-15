@@ -28,6 +28,36 @@ position: absolute;
 margin-bottom: 10.3vw;
 margin-left:1vw;
 `;
+export const TempPosition = styled.div `
+position: absolute;
+margin-bottom: 9vw;
+margin-left:4vw;
+`;
+export const SaucePosition = styled.div `
+position: absolute;
+margin-bottom: 9vw;
+margin-left:4vw;
+`;
+export const SaladPosition = styled.div `
+position: absolute;
+margin-bottom: 9vw;
+margin-left:4vw;
+`;
+export const ExtraPosition = styled.div `
+position: absolute;
+margin-bottom: 9vw;
+margin-left:4vw;
+`;
+export const FlavorPosition = styled.div `
+position: absolute;
+margin-bottom: 9vw;
+margin-left:4vw;
+`;
+export const CheesePosition = styled.div `
+position: absolute;
+margin-bottom: 9vw;
+margin-left:4vw;
+`;
 export const BreadPositionBottom = styled.div `
 position: absolute;
 margin-bottom: 11vw;
