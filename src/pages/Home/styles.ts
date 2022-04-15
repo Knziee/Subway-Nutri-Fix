@@ -9,5 +9,6 @@ margin-right: auto;
 display:flex;
 justify-content: flex-start;
 align-items: space-around;
+flex-direction: column;
  `;
 
