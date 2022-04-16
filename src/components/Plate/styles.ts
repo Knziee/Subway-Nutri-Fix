@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+
+
 export const PlateContainer = styled.div `
 width: 46.875vw;
 height: 17.031vw;
@@ -8,7 +10,7 @@ display:flex;
 align-items: center;
 justify-content:center;
 flex-direction:column;
-margin-top: -4vw;
+margin-top: 1vw;
 
 `;
 export const InfoContainer = styled.div `
@@ -139,6 +141,13 @@ export const SodiumBarText = styled.div `
 font-size: 25px;
 color:#ffff;
 margin-left: 30px;
-margin-top: -60px
+margin-top: -60px;
+`;
 
+export const ButtonsContainer = styled.div `
+
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
 `;

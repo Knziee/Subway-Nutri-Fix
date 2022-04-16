@@ -16,13 +16,14 @@ import {
     ExtraPosition,
     SaladPosition,
     SaucePosition,
-    TempPosition
+    TempPosition,
+    ButtonsContainer
    } from './styles'
 import GraphInfoImg from '../../assets/images/GraficoLegenda.svg'
 import PlateImg from '../../assets/images/Prato1pixelzada.svg'
 import ArrowSodium from '../../assets/images/Seta.svg'
 import PlateImg2 from '../../assets/images/prato2pixelzada.svg'
-import {Buttons} from '../Buttons';
+import {Selectors} from '../Selectors';
 import { PieChart, Pie, Cell } from "recharts";
 
 //paes
@@ -64,7 +65,7 @@ import chipotle from '../../assets/images/molhos/chipottle.svg'
 import maionese from '../../assets/images/molhos/maionese.svg'
 import maioneseTemperada from '../../assets/images/molhos/maioneseTemperada.svg'
 import MostardaEMel from '../../assets/images/molhos/MostardaEMel.svg'
-import parmesão from '../../assets/images/molhos/parmesão.svg'
+import parmesao from '../../assets/images/molhos/parmesao.svg'
 import supreme from '../../assets/images/molhos/supreme.svg'
 
 export const Plate: React.FC = () => {
@@ -241,7 +242,7 @@ flavor = [
   extra = [
     {
       name: 'Nenhum',
-      category: 'Extra',
+      category: 'Adicional',
       img: '',
       carb:0 ,
       fat:0 ,
@@ -251,7 +252,7 @@ flavor = [
       },  
       {
         name: 'Bacon',
-        category: 'Extra',
+        category: 'Adicional',
         img: bacon,
         carb:0.6 ,
         fat:5.6 ,
@@ -261,7 +262,7 @@ flavor = [
         },  
         {
           name: 'Peperoni',
-          category: 'Extra',
+          category: 'Adicional',
           img: pepperoni,
           carb:0 ,
           fat:7.6 ,
@@ -271,7 +272,7 @@ flavor = [
           },  
           {
             name: 'Salame',
-            category: 'Extra',
+            category: 'Adicional',
             img: salami,
             carb:0 ,
             fat:6.5 ,
@@ -281,7 +282,7 @@ flavor = [
             },  
             {
               name: 'Cheddar Cremoso',
-              category: 'Extra',
+              category: 'Adicional',
               img: creamyCheddar,
               carb:2.4 ,
               fat:6.3 ,
@@ -291,7 +292,7 @@ flavor = [
               },  
               {
                 name: 'Cream Cheese',
-                category: 'Extra',
+                category: 'Adicional',
                 img: creamCheese,
                 carb:1.7 ,
                 fat:8.8 ,
@@ -302,7 +303,7 @@ flavor = [
 
       {
       name: 'Dobro de Queijo: Suiço',
-      category: 'Extra',
+      category: 'Adicional',
       img: swiss,
       carb:0.8 ,
       fat:3.8 ,
@@ -312,7 +313,7 @@ flavor = [
       },  
       {
         name: 'Dobro de Queijo: Cheddar',
-        category: 'Extra',
+        category: 'Adicional',
         img: cheddar,
         carb:0.8 ,
         fat:3.8 ,
@@ -322,7 +323,7 @@ flavor = [
         },  
         {
           name: 'Dobro de Queijo: Mussarela',
-          category: 'Extra',
+          category: 'Adicional',
           img: mozzarella,
           carb:30 ,
           fat:3 ,
@@ -493,7 +494,7 @@ flavor = [
                 {
                   name: 'Parmesão',
                   category: 'Molho',
-                  img: parmesão,
+                  img: parmesao,
                   carb:1.3 ,
                   fat:5,
                   protein:0.2,
@@ -508,16 +509,16 @@ flavor = [
                     fat:10,
                     protein:0.2,
                     kcal:237,
-                    sodium:153,
+                    sodium:237,
                     },  
   ]
 
 
   const carbCalc = size[countSize].carb * (bread[countBread].carb + flavor[countFlavor].carb + cheese[countCheese].carb + extra[countExtra].carb + salad[countSalad].carb + sauce[countSauce].carb)
   const fatCalc = size[countSize].fat *  (bread[countBread].fat + flavor[countFlavor].fat + cheese[countCheese].fat + extra[countExtra].fat + salad[countSalad].fat + sauce[countSauce].fat)
-  const proteinCalc = size[countSize].protein *  (bread[countBread].protein + flavor[countFlavor].protein + cheese[countCheese].protein + extra[countExtra].protein + salad[countSauce].protein + sauce[countSauce].protein)
+  const proteinCalc = size[countSize].protein *  (bread[countBread].protein + flavor[countFlavor].protein + cheese[countCheese].protein + extra[countExtra].protein + salad[countSalad].protein + sauce[countSauce].protein)
   const kcalCalc = size[countSize].kcal *  (bread[countBread].kcal + flavor[countFlavor].kcal + cheese[countCheese].kcal + extra[countExtra].kcal + salad[countSalad].kcal + sauce[countSauce].kcal)
-  const sodiumCalc = size[countSize].sodium *  (bread[countBread].sodium + flavor[countFlavor].sodium + cheese[countCheese].sodium + extra[countExtra].sodium + salad[countSalad].sodium + sauce[countSauce].sodiumm)
+  const sodiumCalc = size[countSize].sodium *  (bread[countBread].sodium + flavor[countFlavor].sodium + cheese[countCheese].sodium + extra[countExtra].sodium + salad[countSalad].sodium + sauce[countSauce].sodium)
 
   const foodData = [
     { name: "Carboidrato", value: carbCalc },
@@ -553,6 +554,15 @@ const renderCustomizedLabel = ({
     </text>
   );
 };
+
+
+// estados do texto
+const [isBreadOn, setIsBreadOn] = useState(true)
+const [isFlavorOn, setIsFlavorOn] = useState(false)
+const [isCheeseOn, setIsCheeseOn] = useState(false)
+const [isSaladOn, setIsSaladOn] = useState(false)
+const [isExtraOn, setIsExtraOn] = useState(false)
+const [isSauceOn, setIsSauceOn] = useState(false)
 
     return (<div>
 <InfoContainer>
@@ -594,7 +604,7 @@ const renderCustomizedLabel = ({
 </SodiumBar>
 
 <PlateContainer>
-<PlatePosition>
+<PlatePosition >
 
   {/* size */}
 <SizeDisplay>
@@ -602,8 +612,30 @@ const renderCustomizedLabel = ({
 </SizeDisplay>
 <img src={PlateImg2} alt ='' />
 <PlateText>
+  <div  style={{display: isBreadOn === false ?  'none' :  'block'}}>
 <p>{bread[countBread].category}</p>
 {bread[countBread].name}
+</div>
+<div  style={{display: isFlavorOn === false ?  'none' :  'block'}}>
+<p>{flavor[countFlavor].category}</p>
+{flavor[countFlavor].name}
+</div>
+<div  style={{display: isCheeseOn === false ?  'none' :  'block'}}>
+<p>{cheese[countCheese].category}</p>
+{cheese[countCheese].name}
+</div>
+<div  style={{display: isSaladOn === false ?  'none' :  'block'}}>
+<p>{salad[countSalad].category}</p>
+{salad[countSalad].name}
+</div>
+<div  style={{display: isExtraOn === false ?  'none' :  'block'}}>
+<p>{extra[countExtra].category}</p>
+{extra[countExtra].name}
+</div>
+<div  style={{display: isSauceOn === false ?  'none' :  'block'}}>
+<p>{sauce[countSauce].category}</p>
+{sauce[countSauce].name}
+</div>
 </PlateText>
 </PlatePosition>
 
@@ -623,30 +655,95 @@ const renderCustomizedLabel = ({
   <img src={bread[countBread].img} alt ='' />
   </BreadPositionTop>
 
-<p>ta na array {countBread} </p>
-
-<button onClick={() => countSize === size.length-1 ?  setCountSize(0) : setCountSize(countSize + 1)}>
-    TAMANHO
-</button>
-<button onClick={() => countBread === bread.length-1 ?  setCountBread(0) : setCountBread(countBread + 1)}>
-    PÃO
-</button>
-<button onClick={() => countFlavor === flavor.length-1 ?  setCountFlavor(0) : setCountFlavor(countFlavor + 1)}>
-    SABOR
-</button>
-<button onClick={() => countCheese === cheese.length-1 ?  setCountCheese(0) : setCountCheese(countCheese + 1)}>
-    QUEIJO
-</button>
-<button onClick={() => countSalad === salad.length-1 ?  setCountSalad(0) : setCountSalad(countSalad + 1)}>
-    SALADA
-</button>
-<button onClick={() => countExtra === extra.length-1 ?  setCountExtra(0) : setCountExtra(countExtra + 1)}>
-    ADICIONAL
-</button>
-<button onClick={() => countSauce === sauce.length-1 ?  setCountSauce(0) : setCountSauce(countSauce + 1)}>
-    MOLHO
-</button>
 </PlateContainer>
+<ButtonsContainer>
+<div onClick={() => 
+  {countSize === size.length-1 ?  setCountSize(0) : setCountSize(countSize + 1);
+   }}>
+<Selectors  SelectorText='Tamanho'/>
+
+
+
+</div>
+<div onClick={() => 
+{countBread === bread.length-1 ?  setCountBread(0) : setCountBread(countBread + 1); 
+  setIsBreadOn(true); 
+  console.log('liguei o pão');
+  setIsFlavorOn(false);
+  setIsCheeseOn(false);
+  setIsSaladOn(false);
+  setIsExtraOn(false);
+  setIsSauceOn(false);
+  }}>
+
+<Selectors  SelectorText='Pão'/>
+</div>
+<div onClick={() => 
+{countFlavor === flavor.length-1 ?  setCountFlavor(0) : setCountFlavor(countFlavor + 1);
+   setIsFlavorOn(true);
+    console.log('liguei o sabor');
+    setIsBreadOn(false);
+    setIsCheeseOn(false);
+    setIsSaladOn(false);
+    setIsExtraOn(false);
+    setIsSauceOn(false);
+     }}>
+
+<Selectors  SelectorText='Sabor'/>
+</div>
+<div onClick={() => 
+{countCheese === cheese.length-1 ?  setCountCheese(0) : setCountCheese(countCheese + 1);
+   setIsCheeseOn(true);
+    console.log('liguei o queijo');
+    setIsFlavorOn(false);
+    setIsBreadOn(false);
+    setIsSaladOn(false);
+    setIsExtraOn(false);
+    setIsSauceOn(false);
+     }}>
+
+<Selectors  SelectorText='queijo'/>
+</div>
+<div onClick={() => 
+{countSalad === salad.length-1 ?  setCountSalad(0) : setCountSalad(countSalad + 1);
+   setIsSaladOn(true);
+    console.log('liguei o salada');
+    setIsFlavorOn(false);
+    setIsCheeseOn(false);
+    setIsBreadOn(false);
+    setIsExtraOn(false);
+    setIsSauceOn(false);
+     }}>
+
+<Selectors  SelectorText='Salada'/>
+</div>
+<div onClick={() => 
+{countExtra === extra.length-1 ?  setCountExtra(0) : setCountExtra(countExtra + 1);
+   setIsExtraOn(true);
+    console.log('liguei o extra');
+    setIsFlavorOn(false);
+    setIsCheeseOn(false);
+    setIsSaladOn(false);
+    setIsBreadOn(false);
+    setIsSauceOn(false);
+     }}>
+
+<Selectors  SelectorText='Adicional'/>
+</div>
+<div onClick={() => 
+{countSauce === sauce.length-1 ?  setCountSauce(0) : setCountSauce(countSauce + 1);
+   setIsSauceOn(true);
+    console.log('liguei o sauce');
+    setIsFlavorOn(false);
+    setIsCheeseOn(false);
+    setIsSaladOn(false);
+    setIsExtraOn(false);
+    setIsBreadOn(false);
+     }}>
+
+<Selectors  SelectorText='Molho'/>
+</div>
+</ButtonsContainer>
 </div>
             )
 
