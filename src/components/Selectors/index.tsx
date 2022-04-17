@@ -1,11 +1,15 @@
-import { SelectorButtton } from './styles'
+import { SelectorButtton, SelectorTitle } from './styles'
 interface SelectorProps {
-    SelectorText: string;
+    SelectorText?: string;
+    SelectorTitleText?:string;
 }
 
 
-export const Selectors: React.FC<SelectorProps> = ({SelectorText}) => {
+export const Selectors: React.FC<SelectorProps> = ({SelectorText, SelectorTitleText}) => {
     return (<div>
+        <SelectorTitle>
+            {SelectorTitleText}
+        </SelectorTitle>
 <SelectorButtton>
 {SelectorText}
 </SelectorButtton>

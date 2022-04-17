@@ -2,11 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import GlobalCSS from "./assets/styles/GlobalStyle";
+import {FontStyles} from './assets/fonts/fonts';
 
 
 ReactDOM.render(
   <React.StrictMode>
     <GlobalCSS/>
+    <FontStyles/>
     <App />
   </React.StrictMode>,
   document.getElementById('root')

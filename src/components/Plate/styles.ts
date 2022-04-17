@@ -10,17 +10,17 @@ display:flex;
 align-items: center;
 justify-content:center;
 flex-direction:column;
-margin-top: 1vw;
-
+margin-top: 3vw;
 `;
 export const InfoContainer = styled.div `
+position: absolute;
 float: right;
 
 display:flex;
 align-items: center;
 justify-content:center;
 flex-direction:column;
-margin-right: -3vw;
+margin-left: 30vw;
 margin-top: -4vw;
 `;
 
@@ -42,23 +42,26 @@ margin-left:4vw;
 `;
 export const SaladPosition = styled.div `
 position: absolute;
-margin-bottom: 9vw;
-margin-left:4vw;
+margin-bottom: 145px;
+margin-left:20px;
 `;
 export const ExtraPosition = styled.div `
 position: absolute;
-margin-bottom: 9vw;
-margin-left:4vw;
+margin-bottom: 185px;
+margin-left:20px;
 `;
 export const FlavorPosition = styled.div `
 position: absolute;
-margin-bottom: 9vw;
-margin-left:4vw;
+margin-bottom: 165px;
+margin-left:20px;
+filter: hue-rotate(10deg);
+
 `;
 export const CheesePosition = styled.div `
 position: absolute;
-margin-bottom: 9vw;
-margin-left:4vw;
+margin-bottom: 185px;
+margin-left:20px;
+
 `;
 export const BreadPositionBottom = styled.div `
 position: absolute;
@@ -107,6 +110,7 @@ align-items: right ;
 flex-direction: row;
 flex-wrap:wrap;
 
+
 margin-top: -4vw;
   height: 100px;
   width: 100px;
@@ -132,22 +136,48 @@ span {
 
 `;
 export const SodiumBar = styled.div `
-margin-top: 130px;
+display:flex;
+align-items: left;
+flex-direction: column;
+margin-left:50px;
+margin-top: 60px;
 
 
 `;
 export const SodiumBarText = styled.div `
 
-font-size: 25px;
+font-size: 18px;
 color:#ffff;
-margin-left: 30px;
-margin-top: -60px;
+margin-left:-7px;
+
 `;
 
-export const ButtonsContainer = styled.div `
-
+export const SelectorsContainer = styled.div `
 display: flex;
 align-items: center;
 justify-content: center;
 flex-direction: column;
+
+`;
+
+export const ButtonCentralizer = styled.div `
+display: flex;
+align-items: center;
+justify-content: center;
+
+`;
+
+export const SandwichPosition = styled.div `
+position: absolute;
+display: flex;
+align-items: center;
+justify-content: center;
+margin-top: 40px;
+`;
+export const MultipleSelectorContainer = styled.div `
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: row;
+margin-left: -10px;
 `;

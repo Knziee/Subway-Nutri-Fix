@@ -2,9 +2,9 @@ import styled from "styled-components";
 
 
 
-export const SelectorButtton = styled.button`
+export const MultipleSelectorButtton = styled.button`
         font-family: 'BiryaniBold';
-    width: 25vw;
+    width: 3vw;
     height: 30px;
     cursor: pointer;
     color:white;
@@ -15,6 +15,7 @@ export const SelectorButtton = styled.button`
     margin-bottom: 8px;
     font-size: 12px;
     padding: 6.5px;
+    margin-left:10px;
     
     &:hover {
         background-color: #0e1111;
@@ -24,14 +25,15 @@ export const SelectorButtton = styled.button`
         background-color:black;
     }
     `;
-export const SelectorTitle = styled.div`
+export const MultipleSelectorTitle = styled.div`
 color:white;
 text-transform: uppercase;
 font-size: 9px;
 font-family: 'BiryaniBold';
 margin-bottom:-3px;
 text-align: center;
-
+margin-left:10px;
 `;
+
 
 
