@@ -20,16 +20,20 @@ import {
     SelectorsContainer,
     ButtonCentralizer,
     SandwichPosition,
-    MultipleSelectorContainer
+    MultipleSelectorContainer,
    } from './styles'
 import GraphInfoImg from '../../assets/images/GraficoLegenda.svg'
 import PlateImg from '../../assets/images/Prato1pixelzada.svg'
+import pratoRedondoComSombra from '../../assets/images/pratoRedondoComSombra.svg'
+import PratoRedondo from '../../assets/images/pratoRedondo.svg'
 import SodiumIcon from '../../assets/images/saltIcon.svg'
 import PlateImg2 from '../../assets/images/prato2pixelzada.svg'
 import {Selectors} from '../Selectors';
 import { MultipleSelectors} from '../MultipleSelectors'
 import { PieChart, Pie, Cell } from "recharts";
 import {Buttons} from '../../components/Buttons';
+import {ChartInfo} from '../ChartInfo';
+import {Disclaimer} from '../Disclaimer';
 
 //paes
 import noveGraos from '../../assets/images/paes/9graosCima.svg'
@@ -627,7 +631,7 @@ let saladPepino: any
     { name: "Proteína", value: proteinCalc },
     
   ];
-  const colors = ["#0088FE", "#00C49F", "#FFBB28"];
+  const colors = ["#3F7EB8", "#DC6060", "#DCD760"];
 
   const radian = Math.PI / 180;
 const renderCustomizedLabel = ({
@@ -693,11 +697,11 @@ const [isMultiSelectOn, setIsMultiSelectOn] = useState(false)
       </ButtonCentralizer>
 <InfoContainer>
 <GraphInfo>
-{/* <img src={GraphInfoImg} alt=''/> */}
+  <ChartInfo ChartText1= {carbCalc.toFixed(0) + 'g'} ChartText2={fatCalc.toFixed(0) + 'g'} ChartText3={proteinCalc.toFixed(0) + 'g'}/>
 </GraphInfo>
-<PieChart width={400} height={400} style={{ marginTop: '-3vw', transform:'scale(1.0)'
+<PieChart width={400} height={400} style={{ marginTop: '-3vw', transform:'scale(1.0)', 
 }}>
-        <Pie
+        <Pie 
           data={foodData}
           cx={200}
           cy={200}
@@ -708,14 +712,14 @@ const [isMultiSelectOn, setIsMultiSelectOn] = useState(false)
           dataKey="value"
         >
           {foodData.map((entry, index) => (
-            <Cell key={`cell-${index}`} fill={colors[index % colors.length]} />
+            <Cell key={`cell-${index}`} fill={colors[index % colors.length]}  />
           ))}
         </Pie>
       </PieChart>
-      <KcalCircle>
+      <KcalCircle >
         {/* kcal */}
 <p>Calorias</p>
-<span>{kcalCalc}</span>
+<span>{kcalCalc.toFixed(0)}</span>
 </KcalCircle>
 
 </InfoContainer>
@@ -725,7 +729,7 @@ const [isMultiSelectOn, setIsMultiSelectOn] = useState(false)
 <img src ={SodiumIcon} alt='' width={'60px'} />
   <SodiumBarText>
 
-  Sódio: {sodiumCalc}
+  Sódio: {sodiumCalc.toFixed(0) + 'mg'}
   </SodiumBarText>
 </SodiumBar>
 
@@ -736,7 +740,11 @@ const [isMultiSelectOn, setIsMultiSelectOn] = useState(false)
 <SizeDisplay>
   {size[countSize].name}
 </SizeDisplay>
-<img src={PlateImg2} alt ='' />
+{/* <img src={PlateImg2} alt ='' /> */}
+<img src={pratoRedondoComSombra} alt ='' />
+{/* <PlateCss/> */}
+{/* <img src={Tray} alt ='' /> */}
+
 <PlateText>
   <div  style={{display: isBreadOn === false ?  'none' :  'block'}}>
 <p>{bread[countBread].category}</p>
@@ -1057,6 +1065,7 @@ const [isMultiSelectOn, setIsMultiSelectOn] = useState(false)
 <Selectors  SelectorText={sauce[countSauce].name}  SelectorTitleText='Molho'/>
 </div>
 </SelectorsContainer>
+<Disclaimer/>
 </div>
             )
 

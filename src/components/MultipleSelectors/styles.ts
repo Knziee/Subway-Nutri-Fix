@@ -10,7 +10,7 @@ export const MultipleSelectorButtton = styled.button`
     color:white;
     border:none;
     border-radius: 10px;
-    background-color: #232b2b;
+    background-color: #00cc66;
     text-transform: uppercase;
     margin-bottom: 8px;
     font-size: 12px;
@@ -18,11 +18,11 @@ export const MultipleSelectorButtton = styled.button`
     margin-left:10px;
     
     &:hover {
-        background-color: #0e1111;
+        background-color: #0F9246;
     }
 
     :active {
-        background-color:black;
+        background-color:#006633;
     }
     `;
 export const MultipleSelectorTitle = styled.div`

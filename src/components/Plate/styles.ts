@@ -73,9 +73,20 @@ export const PlatePosition = styled.div `
 img {
     width: 600px; 
     height: 150px; 
-    object-fit: cover
+    object-fit: cover;
+
 }
 `;
+export const PlateCss = styled.div `
+
+    width: 450px; 
+    height: 150px; 
+    object-fit: cover;
+    background-color: #fff;
+    border-radius: 50%;
+
+`;
+
 export const SizeDisplay = styled.div `
 margin-left: 90px;
 font-size: 30px;
@@ -96,12 +107,13 @@ p {
 `;
 
 export const GraphInfo = styled.div `
-img {
-    width:8vw;
-    margin-left: 3vw;
-    margin-top: 4vw;
-    margin-bottom: 1vw;
-}
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: row;
+position: absolute;
+margin-right: 106px;
+margin-bottom:90px ;
 `;
 
 export const KcalCircle = styled.div `
@@ -140,7 +152,7 @@ display:flex;
 align-items: left;
 flex-direction: column;
 margin-left:50px;
-margin-top: 60px;
+margin-top: 28px;
 
 
 `;
@@ -148,7 +160,7 @@ export const SodiumBarText = styled.div `
 
 font-size: 18px;
 color:#ffff;
-margin-left:-7px;
+margin-left:-20px;
 
 `;
 
@@ -181,3 +193,4 @@ justify-content: center;
 flex-direction: row;
 margin-left: -10px;
 `;
+
