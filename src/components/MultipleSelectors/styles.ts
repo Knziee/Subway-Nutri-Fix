@@ -18,12 +18,16 @@ export const MultipleSelectorButtton = styled.button`
     margin-left:10px;
     
     &:hover {
-        background-color: #0F9246;
+        background-color: #006633;
     }
 
     :active {
-        background-color:#006633;
+        background-color:#003300;
     }
+    @media only screen and (max-width: 1024px) {
+        width: 4.2vw;
+
+}
     `;
 export const MultipleSelectorTitle = styled.div`
 color:white;

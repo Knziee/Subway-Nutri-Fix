@@ -11,6 +11,17 @@ align-items: center;
 justify-content:center;
 flex-direction:column;
 margin-top: 3vw;
+@media only screen and (min-width: 2498px) {
+  margin-top: 3vw;
+
+ }
+ @media only screen and (max-width: 1366px) {
+transform: scale(0.9)
+
+}
+@media only screen and (max-width: 1024px) {
+  margin-top: 39px;
+}
 `;
 export const InfoContainer = styled.div `
 position: absolute;
@@ -22,6 +33,17 @@ justify-content:center;
 flex-direction:column;
 margin-left: 30vw;
 margin-top: -4vw;
+@media only screen and (min-width: 2498px) {
+  margin-top: 1vw;   
+ }
+  @media only screen and (max-width: 1366px) {
+    margin-top: -8vw;
+    transform: scale(0.9)
+}
+@media only screen and (max-width: 1024px) {
+  margin-top: -10vw;
+    transform: scale(0.7)
+}
 `;
 
 
@@ -29,53 +51,140 @@ export const BreadPositionTop = styled.div `
 position: absolute;
 margin-bottom: 10.3vw;
 margin-left:1vw;
+@media only screen and (max-width: 1600px) {
+margin-bottom: 12.7vw;
+}
+
 `;
 export const TempPosition = styled.div `
 position: absolute;
 margin-bottom: 9vw;
 margin-left:4vw;
+@media only screen and (min-width: 2498px) {
+  margin-bottom: 235px;
+}
+@media only screen and (max-width: 1600px) {
+margin-bottom: 10vw;
+}
+
 `;
 export const SaucePosition = styled.div `
 position: absolute;
 margin-bottom: 9vw;
 margin-left:4vw;
+@media only screen and (min-width: 2498px) {
+  margin-bottom: 245px;
+}
+@media only screen and (max-width: 1600px) {
+margin-bottom: 11vw;
+}
+@media only screen and (max-width: 1366px) {
+margin-top: -9px;
+}
+@media only screen and (max-width: 1024px) {
+  margin-top: 1vw;
+
+}
 `;
 export const SaladPosition = styled.div `
 position: absolute;
 margin-bottom: 145px;
 margin-left:20px;
+@media only screen and (min-width: 2498px) {
+  margin-bottom: 235px;
+}
+@media only screen and (max-width: 1600px) {
+margin-bottom: 11vw;
+}
+@media only screen and (max-width: 1366px) {
+margin-top: 9px;
+}
+@media only screen and (max-width: 1024px) {
+  margin-top: 2vw;
+
+}
 `;
 export const ExtraPosition = styled.div `
 position: absolute;
 margin-bottom: 185px;
 margin-left:20px;
+@media only screen and (min-width: 2498px) {
+  margin-bottom: 235px;
+}
+@media only screen and (max-width: 1600px) {
+margin-bottom: 11vw;
+}
+@media only screen and (max-width: 1366px) {
+margin-top: -9px;
+}
+@media only screen and (max-width: 1024px) {
+  margin-top: 2vw;
+
+}
 `;
 export const FlavorPosition = styled.div `
 position: absolute;
 margin-bottom: 165px;
 margin-left:20px;
 filter: hue-rotate(10deg);
+@media only screen and (min-width: 2498px) {
+  margin-bottom: 235px;
+}
+@media only screen and (max-width: 1366px) {
+margin-top: 19px;
+}
+@media only screen and (max-width: 1024px) {
+  margin-top: 60px;
 
+}
 `;
 export const CheesePosition = styled.div `
 position: absolute;
 margin-bottom: 185px;
 margin-left:20px;
+@media only screen and (min-width: 2498px) {
+  margin-bottom: 235px;
+}
+@media only screen and (max-width: 1600px) {
+margin-bottom: 11vw;
+}
+@media only screen and (max-width: 1024px) {
+  margin-top: 10px;
+
+}
 
 `;
 export const BreadPositionBottom = styled.div `
 position: absolute;
 margin-bottom: 11vw;
 margin-left:1vw;
+@media only screen and (max-width: 1600px) {
+
+  margin-bottom: 13.8vw;
+}
+
 `;
 
 export const PlatePosition = styled.div `
+
 img {
     width: 600px; 
     height: 150px; 
     object-fit: cover;
 
 }
+@media only screen and (min-width: 2498px) {
+  margin-bottom: 2.5vw;    
+}
+@media only screen and (max-width: 1366px) {
+transform: scale(0.9)
+
+}
+@media only screen and (max-width: 1024px) {
+  margin-top: 70px;
+  transform: scale(0.9)
+}
+
 `;
 export const PlateCss = styled.div `
 
@@ -92,6 +201,7 @@ margin-left: 90px;
 font-size: 30px;
 margin-top: -20px;
 color: #FFCD3F;
+
 `;
 export const PlateText = styled.div `
 font-size: 50px;
@@ -104,6 +214,11 @@ p {
 
 
 }
+@media only screen and (max-width: 1366px) {
+transform: scale(0.8)
+
+}
+
 `;
 
 export const GraphInfo = styled.div `
@@ -114,6 +229,7 @@ flex-direction: row;
 position: absolute;
 margin-right: 106px;
 margin-bottom:90px ;
+
 `;
 
 export const KcalCircle = styled.div `
@@ -151,9 +267,19 @@ export const SodiumBar = styled.div `
 display:flex;
 align-items: left;
 flex-direction: column;
-margin-left:50px;
+margin-left:90px;
 margin-top: 28px;
+@media only screen and (min-width: 2498px) {
+  margin-left: 10vw;   
+ }
+ @media only screen and (max-width: 1366px) {
+  margin-left: 2vw;
 
+}
+@media only screen and (max-width: 1366px) {
+transform: scale(0.9)
+
+}
 
 `;
 export const SodiumBarText = styled.div `
@@ -169,7 +295,20 @@ display: flex;
 align-items: center;
 justify-content: center;
 flex-direction: column;
-
+@media only screen and (min-width: 2498px) {
+ margin-top: -89px;
+}
+@media only screen and (max-width: 1366px) {
+transform: scale(0.8);
+margin-top: -39px;
+}
+@media only screen and (max-width: 1280px) {
+  transform: scale(0.7);
+}
+@media only screen and (max-width: 1024px) {
+margin-top: 5px;
+transform: scale(0.7);
+}
 `;
 
 export const ButtonCentralizer = styled.div `
@@ -185,7 +324,11 @@ display: flex;
 align-items: center;
 justify-content: center;
 margin-top: 40px;
+@media only screen and (min-width: 2498px) {
+}
 `;
+
+
 export const MultipleSelectorContainer = styled.div `
 display: flex;
 align-items: center;
