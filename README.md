@@ -50,7 +50,7 @@ Tela Mobile:
 
 
 ## Link para teste:
-
+https://subway-nutri-fix.vercel.app/
 
 
 ## Desenvolvido por:
