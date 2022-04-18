@@ -1,44 +1,43 @@
-//paes
-import noveGraos from "../../assets/images/paes/9graosCima.svg";
-import tresQueijos from "../../assets/images/paes/3queijosCima.svg";
-import parmesaEOregano from "../../assets/images/paes/parmesaoComOreganoCima.svg";
-import aveiaEMel from "../../assets/images/paes/aveiaEmelCima.svg";
-import italianoBranco from "../../assets/images/paes/brancItalianoCima.svg";
-import noveGraosInferior from "../../assets/images/paes/9graosBaixo.svg";
-import tresQueijosInferior from "../../assets/images/paes/3queijosBaixo.svg";
-import parmesaEOreganoInferior from "../../assets/images/paes/parmesaoComOreganoBaixo.svg";
-import aveiaEMelInferior from "../../assets/images/paes/aveiaEmelBaixo.svg";
-import italianoBrancoInferior from "../../assets/images/paes/brancItalianoBaixo.svg";
-//sabores
-import steak from "../../assets/images/sabores/carne.svg";
-import frango from "../../assets/images/sabores/frango.svg";
+import noveGraos from "../../assets/images/9graosCima.svg";
+import tresQueijos from "../../assets/images/3queijosCima.svg";
+import parmesaEOregano from "../../assets/images/parmesaoComOreganoCima.svg";
+import aveiaEMel from "../../assets/images/aveiaEmelCima.svg";
+import italianoBranco from "../../assets/images/brancItalianoCima.svg";
+import noveGraosInferior from "../../assets/images/9graosBaixo.svg";
+import tresQueijosInferior from "../../assets/images/3queijosBaixo.svg";
+import parmesaEOreganoInferior from "../../assets/images/parmesaoComOreganoBaixo.svg";
+import aveiaEMelInferior from "../../assets/images/aveiaEmelBaixo.svg";
+import italianoBrancoInferior from "../../assets/images/brancItalianoBaixo.svg";
+
+import steak from "../../assets/images/carne.svg";
+import frango from "../../assets/images/frango.svg";
 //queijo
-import swiss from "../../assets/images/queijos/queijosuico.svg";
-import cheddar from "../../assets/images/queijos/queijocheddar.svg";
-import mozzarella from "../../assets/images/queijos/queijomussarela.svg";
+import swiss from "../../assets/images/queijosuico.svg";
+import cheddar from "../../assets/images/queijocheddar.svg";
+import mozzarella from "../../assets/images/queijomussarela.svg";
 //adicional
-import bacon from "../../assets/images/adicionais/bacon.svg";
-import pepperoni from "../../assets/images/adicionais/pepperoni.svg";
-import salami from "../../assets/images/adicionais/salame.svg";
-import creamyCheddar from "../../assets/images/adicionais/cheddarCremoso.svg";
-import creamCheese from "../../assets/images/adicionais/creamCheese.svg";
+import bacon from "../../assets/images/bacon.svg";
+import pepperoni from "../../assets/images/pepperoni.svg";
+import salami from "../../assets/images/salame.svg";
+import creamyCheddar from "../../assets/images/cheddarCremoso.svg";
+import creamCheese from "../../assets/images/creamCheese.svg";
 //salad
-import alfacePicada from "../../assets/images/salada/alfacePicada.svg";
-import tomate from "../../assets/images/salada/tomate.svg";
-import pimentaoverde from "../../assets/images/salada/pimentaoverde.svg";
-import cebolafatiada from "../../assets/images/salada/cebolafatiada.svg";
-import picles from "../../assets/images/salada/picles.svg";
-import azeitonas from "../../assets/images/salada/azeitonas.svg";
-import pepino from "../../assets/images/salada/pepino.svg";
+import alfacePicada from "../../assets/images/alfacePicada.svg";
+import tomate from "../../assets/images/tomate.svg";
+import pimentaoverde from "../../assets/images/pimentaoverde.svg";
+import cebolafatiada from "../../assets/images/cebolafatiada.svg";
+import picles from "../../assets/images/picles.svg";
+import azeitonas from "../../assets/images/azeitonas.svg";
+import pepino from "../../assets/images/pepino.svg";
 //sauce
-import barbecue from "../../assets/images/molhos/barbecue.svg";
-import cebolaAgridoce from "../../assets/images/molhos/cebolaAgridoce.svg";
-import chipotle from "../../assets/images/molhos/chipottle.svg";
-import maionese from "../../assets/images/molhos/maionese.svg";
-import maioneseTemperada from "../../assets/images/molhos/maioneseTemperada.svg";
-import MostardaEMel from "../../assets/images/molhos/MostardaEMel.svg";
-import parmesao from "../../assets/images/molhos/parmesao.svg";
-import supreme from "../../assets/images/molhos/supreme.svg";
+import barbecue from "../../assets/images/barbecue.svg";
+import cebolaAgridoce from "../../assets/images/cebolaAgridoce.svg";
+import chipotle from "../../assets/images/chipottle.svg";
+import maionese from "../../assets/images/maionese.svg";
+import maioneseTemperada from "../../assets/images/maioneseTemperada.svg";
+import MostardaEMel from "../../assets/images/MostardaEMel.svg";
+import parmesao from "../../assets/images/parmesao.svg";
+import supreme from "../../assets/images/supreme.svg";
 //components
 import pratoRedondoComSombra from "../../assets/images/pratoRedondoComSombra.svg";
 import SodiumIcon from "../../assets/images/saltIcon.svg";
