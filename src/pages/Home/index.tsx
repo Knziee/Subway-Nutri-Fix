@@ -1,18 +1,11 @@
-import {Plate} from '../../components/Plate';
-// import {Buttons} from '../../components/Buttons';
-import  {BackgroundContainer } from './styles';
+import { Plate } from "../../components/Plate";
 
-
+import { BackgroundContainer } from "./styles";
 
 export const Home: React.FC = () => {
-    return (
-        <BackgroundContainer>
-        {/* <Buttons /> */}
-
-        <Plate>
-
-        </Plate>
-
-        </BackgroundContainer>
-    )
-}
+  return (
+    <BackgroundContainer>
+      <Plate></Plate>
+    </BackgroundContainer>
+  );
+};
