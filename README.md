@@ -39,13 +39,13 @@ Em fúturo próximo:
 ## Preview do site:
 
 Tela de Seleção:
-![preview](/src/assets/images/ReadmeImages/SubwaynutriFixScreenshotBegin.png "preview")
+![preview](/src/assets/images/SubwaynutriFixScreenshotBegin.png "preview")
 
 Sanduiche com opções selecionadas:
-![preview](/src/assets/images/ReadmeImages/SubwaynutriFixScreenshotFull.png "preview")
+![preview](/src/assets/images/SubwaynutriFixScreenshotFull.png "preview")
 
 Tela Mobile:
-![preview](/src/assets/images/ReadmeImages/SubwaynutriFixScreenshotMobile.png "preview")
+![preview](/src/assets/images/SubwaynutriFixScreenshotMobile.png "preview")
 
 
 
