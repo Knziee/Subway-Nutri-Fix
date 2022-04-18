@@ -38,5 +38,9 @@ margin-top: -29px;
 margin-top: -25px;
 
 }
+@media only screen and (max-width: 414px) {
+    margin-right: -80px;
+    margin-top: 45px;
+}
 `;
 

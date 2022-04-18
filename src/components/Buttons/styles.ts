@@ -20,6 +20,10 @@ font-size:15px;
         cursor:pointer;
         background-color: ${(props: any)  => (props.ResetButton ? '#13bf5b' : '#d4564e')};
 }
+@media only screen and (max-width: 414px) {
+        transform: scale(0.7);
+        margin-top: -2vw;
+}
     `;
 
 export const ButtonPosition = styled.button<PropsBackgroundButton> `

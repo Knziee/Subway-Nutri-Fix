@@ -26,6 +26,9 @@ export const MultipleSelectorButtton = styled.button`
     }
     @media only screen and (max-width: 1024px) {
         width: 4.2vw;
+}
+@media only screen and (max-width: 414px) {
+        width: 10vw;
 
 }
     `;

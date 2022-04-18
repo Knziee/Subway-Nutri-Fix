@@ -24,6 +24,11 @@ export const SelectorButtton = styled.button`
     :active {
         background-color:#003300;
     }
+    @media only screen and (max-width: 414px) {
+        width: 75vw;
+        margin-left:-16px;
+}
+
     `;
 export const SelectorTitle = styled.div`
 color:white;

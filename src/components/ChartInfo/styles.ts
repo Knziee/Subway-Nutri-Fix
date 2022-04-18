@@ -14,6 +14,18 @@ height: 155px;
   p{
       display: flex;
   }
+  @media only screen and (max-width: 2498px) {
+    margin-bottom:-3px;
+    margin-left:-3px;
+}
+  @media only screen and (max-width: 1600px) {
+    margin-bottom:3px;
+
+}
+  @media only screen and (max-width: 414px) {
+    margin-bottom:-22vw;
+    margin-left:2vw;
+}
 `;
 
 
@@ -33,6 +45,10 @@ color: white;
 font-size: 15px;
 
 margin-right: 8px;
+@media only screen and (max-width: 414px) {
+    margin-bottom:-22vw;
+    margin-left:-2vw;
+}
 `;
 export const ChartAndBackgroundInfoContainer = styled.div `
 display:flex;

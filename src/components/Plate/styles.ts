@@ -22,6 +22,9 @@ transform: scale(0.9)
 @media only screen and (max-width: 1024px) {
   margin-top: 39px;
 }
+@media only screen and (max-width: 414px) {
+  margin-top: 70px;
+}
 `;
 export const InfoContainer = styled.div `
 position: absolute;
@@ -43,6 +46,12 @@ margin-top: -4vw;
 @media only screen and (max-width: 1024px) {
   margin-top: -10vw;
     transform: scale(0.7)
+}
+@media only screen and (max-width: 414px) {
+        transform: scale(0.6);
+        margin-top: -32vw;
+        margin-left: -15vw;
+        flex-direction:row;
 }
 `;
 
@@ -85,6 +94,10 @@ margin-top: -9px;
   margin-top: 1vw;
 
 }
+@media only screen and (max-width: 414px) {
+  margin-top: 26px;
+
+}
 `;
 export const SaladPosition = styled.div `
 position: absolute;
@@ -101,6 +114,10 @@ margin-top: 9px;
 }
 @media only screen and (max-width: 1024px) {
   margin-top: 2vw;
+
+}
+@media only screen and (max-width: 414px) {
+  margin-top: 46px;
 
 }
 `;
@@ -135,6 +152,10 @@ margin-top: 19px;
 }
 @media only screen and (max-width: 1024px) {
   margin-top: 60px;
+
+}
+@media only screen and (max-width: 414px) {
+  margin-top: 146px;
 
 }
 `;
@@ -184,24 +205,27 @@ transform: scale(0.9)
   margin-top: 70px;
   transform: scale(0.9)
 }
-
-`;
-export const PlateCss = styled.div `
-
-    width: 450px; 
+@media only screen and (max-width: 414px) {
+  margin-top: 136px;
+  img {
+    width: 500px; 
     height: 150px; 
-    object-fit: cover;
-    background-color: #fff;
-    border-radius: 50%;
 
+
+}
+}
 `;
+
 
 export const SizeDisplay = styled.div `
 margin-left: 90px;
 font-size: 30px;
 margin-top: -20px;
 color: #FFCD3F;
+@media only screen and (max-width: 414px) {
+  margin-left: 30px;
 
+}
 `;
 export const PlateText = styled.div `
 font-size: 50px;
@@ -217,6 +241,10 @@ p {
 @media only screen and (max-width: 1366px) {
 transform: scale(0.8)
 
+}
+@media only screen and (max-width: 414px) {
+margin-top: -20px;
+  transform: scale(0.7);
 }
 
 `;
@@ -261,7 +289,11 @@ span {
   margin-left: 28px;
   color:#FFCD3F
 }
-
+@media only screen and (max-width: 414px) {
+  margin-top: 10px;
+  margin-left : 83vw;
+  position: absolute;
+}
 `;
 export const SodiumBar = styled.div `
 display:flex;
@@ -279,6 +311,11 @@ margin-top: 28px;
 @media only screen and (max-width: 1366px) {
 transform: scale(0.9)
 
+}
+@media only screen and (max-width: 414px) {
+        transform: scale(0.6);
+        margin-top: 4vw;
+        margin-left: -35.5vw;
 }
 
 `;
@@ -308,6 +345,10 @@ margin-top: -39px;
 @media only screen and (max-width: 1024px) {
 margin-top: 5px;
 transform: scale(0.7);
+}
+@media only screen and (max-width: 414px) {
+  margin-top: 106px;
+  transform: scale(0.9);
 }
 `;
 
